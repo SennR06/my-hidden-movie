@@ -1,0 +1,83 @@
+:root{
+    --black: #0c0c0c;
+    --white: #f2f2f2;
+    --accent-red: #d60000;
+}
+
+html, body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100vh;
+}
+
+h1, h2, h3, p, label{
+    font-family: Inter;
+}
+
+header{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--black);
+    padding: 1em 2em;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 25px var(--accent-red);
+    z-index: 2;
+    flex-shrink: 0;
+}
+header h1{
+    color: var(--white);
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: 800;
+    transition: color .3s ease;
+}
+header h1:hover{
+    color: var(--accent-red);
+}
+header img{
+    height: 3em;
+}
+
+/*main*/
+main{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--black);
+    width: calc(100vw - 4em);
+    padding: 2em;
+    z-index: 1;
+    flex-grow: 1;
+}
+main h1, main h2, main, main p{
+    color: var(--white);
+    text-align: center;
+}
+main h1{
+    font-size: 2.2em;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: .1em;
+}
+main h2{
+    font-size: 1.5em;
+    font-weight: 200;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+#p-2{
+    margin-top: 0;
+}
+/*VIDEO*/
+iframe{
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    z-index: 3;
+    width: clamp(250px, 35vw, 500px);
+    aspect-ratio: 16 / 9;
+}
